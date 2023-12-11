@@ -8,7 +8,6 @@ import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 const AnimatedNumber = ({ value }) => {
-  console.log(value, "-------");
   const ref = useRef(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
