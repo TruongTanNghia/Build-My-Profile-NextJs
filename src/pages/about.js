@@ -2,23 +2,11 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import React, { useEffect, useRef } from "react";
 import AnimatedText from "@/components/AnimatedText";
-import profilePic from "../../public/images/profile/avatar.png";
+import profilePic from "../../public/images/profile/developer-pic-2.jpg";
 import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 const About = () => {
-  const sharp = require("sharp");
-
-  sharp({ profilePic })
-    .rotate()
-    .toFile("output.jpg", (err, info) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log(info);
-      }
-    });
-
   const AnimatedNumber = ({ value }) => {
     const ref = useRef(null);
     const motionValue = useMotionValue(0);
