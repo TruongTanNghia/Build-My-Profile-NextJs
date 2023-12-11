@@ -1,11 +1,17 @@
-import Layout from "@/components/Layout";
+//* LIB
+import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/developer-pic-1.png";
+
+//* IMPORT PAGE
+import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
-import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
+
+//* IMPORT IMAGE
+import profilePic from "../../public/images/profile/developer-pic-1.png";
+import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 export default function Home() {
   return (
     <>
@@ -26,7 +32,7 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-center self-center ">
               <h1></h1>
               <AnimatedText
-                text="Hi I'm Truong Tan Nghia.  "
+                text="Hi I'm Truong Tan Nghia. I'm a web developer."
                 className="text-6xl !text-left"
               />
               <p className="my-4 text-base font-medium">
@@ -56,6 +62,9 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
+        <div className="absolute right-8 bottom-8 inline-block w-24">
+          <Image src={lightBulb} alt="TanNghia" className="w-full h-auto" />
+        </div>
       </main>
     </>
   );
