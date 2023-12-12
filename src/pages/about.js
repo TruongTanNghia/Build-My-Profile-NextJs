@@ -2,7 +2,8 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import React, { useEffect, useRef } from "react";
 import AnimatedText from "@/components/AnimatedText";
-import profilePic from "../../public/images/profile/developer-pic-2.jpg";
+// import profilePic from "../../public/images/profile/developer-pic-2.jpg";
+import profilePic from "../../public/images/profile/avatar.png";
 import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
