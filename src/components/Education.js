@@ -1,15 +1,15 @@
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
+import { dataEducation } from "@/dummy/Education";
 
-const Details = ({ type, time, place, info }) => {
-  const ref = React.useRef(null);
+const Details = ({ type, time, place, info, reference }) => {
   return (
     <li
-      ref={ref}
+      ref={reference}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between"
     >
-      <LiIcon reference={ref} />
+      <LiIcon reference={reference} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
@@ -25,12 +25,13 @@ const Details = ({ type, time, place, info }) => {
   );
 };
 
-const Education = () => {
+const Education = ({ educationData }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
   });
+
   return (
     <>
       <div className="my-64">
@@ -43,38 +44,16 @@ const Education = () => {
             className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4">
-            <Details
-              type="  Bachelor Of Science In Computer Science "
-              time=" 2016-2020 "
-              place="Massachusetts Institute Of Technology (MIT)"
-              info="Relevant
-              courses included Data Structures and Algorithms, Computer Systems
-              Engineering, and Artificial Intelligence."
-            />
-            <Details
-              type="  Bachelor Of Science In Computer Science "
-              time=" 2016-2020 "
-              place="Massachusetts Institute Of Technology (MIT)"
-              info="Relevant
-              courses included Data Structures and Algorithms, Computer Systems
-              Engineering, and Artificial Intelligence."
-            />
-            <Details
-              type="  Bachelor Of Science In Computer Science "
-              time=" 2016-2020 "
-              place="Massachusetts Institute Of Technology (MIT)"
-              info="Relevant
-              courses included Data Structures and Algorithms, Computer Systems
-              Engineering, and Artificial Intelligence."
-            />
-            <Details
-              type="  Bachelor Of Science In Computer Science "
-              time=" 2016-2020 "
-              place="Massachusetts Institute Of Technology (MIT)"
-              info="Relevant
-              courses included Data Structures and Algorithms, Computer Systems
-              Engineering, and Artificial Intelligence."
-            />
+            {dataEducation.map((edu, id) => (
+              <Details
+                key={id}
+                type={edu.type}
+                time={edu.time}
+                place={edu.place}
+                info={edu.info}
+                reference={ref}
+              />
+            ))}
           </ul>
         </div>
       </div>

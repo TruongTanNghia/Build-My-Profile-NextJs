@@ -61,7 +61,7 @@ const NavBar = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href="https://www.facebook.com/tannghiaaaa/"
+            href="https://github.com/TruongTanNghia"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -79,7 +79,7 @@ const NavBar = () => {
             <Facebook />
           </motion.a>
           <motion.a
-            href="https://www.facebook.com/tannghiaaaa/"
+            href="https://www.linkedin.com/in/ngh%C4%A9a-tr%C6%B0%C6%A1ng-t%E1%BA%A5n-7b94b52a5/"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -88,7 +88,7 @@ const NavBar = () => {
             <LinkedInIcon />
           </motion.a>
           <motion.a
-            href="https://www.facebook.com/tannghiaaaa/"
+            href="https://www.pinterest.com/tannghiaxp"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
