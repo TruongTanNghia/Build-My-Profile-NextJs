@@ -41,7 +41,7 @@ const About = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Passion Fuels Purpose!"
-            className="text-6xl mb-16"
+            className="text-8xl mb-16"
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
