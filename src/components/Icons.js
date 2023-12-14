@@ -18,8 +18,8 @@ export const Facebook = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    width="40px"
-    height="40px"
+    width="30px"
+    height="30px"
     viewBox="0 0 309.142 309.142"
     {...props}
   >

@@ -32,21 +32,21 @@ const NavBar = () => {
     <>
       <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
         <nav>
-          <CustomLink href="/" title="Home" className="mr-4 text-[18px]" />
+          <CustomLink href="/" title="Home" className="mr-4 text-[15px]" />
           <CustomLink
             href="/about"
             title="About"
-            className="mx-4 text-[18px]"
+            className="mx-4 text-[15px]"
           />
           <CustomLink
             href="/project"
             title="Project"
-            className="mx-4 text-[18px]"
+            className="mx-4 text-[15px]"
           />
           <CustomLink
             href="/articles"
             title="Articles"
-            className="ml-4 text-[18px]"
+            className="ml-4 text-[15px]"
           />
         </nav>
 
@@ -56,7 +56,7 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-10 mx-5"
+            className="w-8 mx-5"
           >
             <TwitterIcon />
           </motion.a>
@@ -65,7 +65,7 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-10 mx-5"
+            className="w-8 mx-5"
           >
             <GithubIcon />
           </motion.a>
@@ -74,7 +74,7 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-10 mx-5"
+            className="w-8 mx-5"
           >
             <Facebook />
           </motion.a>
@@ -83,7 +83,7 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-10 mx-5"
+            className="w-8 mx-5"
           >
             <LinkedInIcon />
           </motion.a>
@@ -92,7 +92,7 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-10 ml-5"
+            className="w-8 ml-5"
           >
             <PinterestIcon />
           </motion.a>
