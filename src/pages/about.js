@@ -42,7 +42,7 @@ const About = () => {
         <title>Tan-Nghia-Profile | About Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className="flex w-full flex-col items-center justify-between">
+      <main className="flex w-full flex-col items-center justify-between dark:text-light">
         <Layout className="pt-12">
           <AnimatedText
             text="Passion Fuels Purpose!"
@@ -50,7 +50,7 @@ const About = () => {
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Hi, I am Tan Nghia
               </h2>
               <p className="font-medium">
@@ -86,7 +86,7 @@ const About = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumber value={50} /> +
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   satisfied clients
                 </h2>
               </div>
@@ -94,7 +94,7 @@ const About = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumber value={40} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   projects completed
                 </h2>
               </div>
@@ -102,7 +102,7 @@ const About = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumber value={4} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   years of experience
                 </h2>
               </div>
