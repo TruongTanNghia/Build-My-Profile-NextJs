@@ -28,7 +28,6 @@ const useThemeSwitcher = () => {
         }
       }
     };
-
     handleChange();
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
@@ -36,10 +35,10 @@ const useThemeSwitcher = () => {
 
   React.useEffect(() => {
     if (mode === "dark") {
-      window.localStorage.setItem("theme", "dark");
+      window.localStorage.setItem("theme", "light");
       document.documentElement.classList.add("dark");
     } else {
-      window.localStorage.setItem("theme", "light");
+      window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.remove("dark");
     }
   }, [mode]);

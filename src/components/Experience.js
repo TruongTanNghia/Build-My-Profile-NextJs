@@ -21,7 +21,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
           <a
             href={companyLink}
             target="_blank"
-            className="text-primary capitalize"
+            className="text-primary capitalize dark:text-primaryDark"
           >
             {company}
           </a>
@@ -44,15 +44,15 @@ const Experience = () => {
   return (
     <>
       <div className="my-64">
-        <h2 className="font-bold text-8xl mb-32 w-full text-center">
+        <h2 className="font-bold text-8xl mb-32 w-full text-center dark:text-primaryDark">
           Experience
         </h2>
         <div ref={ref} className="w-[75%] mx-auto relative">
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+            className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark"
           />
-          <ul className="w-full flex flex-col items-start justify-between ml-4">
+          <ul className="w-full flex flex-col items-start justify-between ml-4 ">
             {dataExperience.map((edu, id) => (
               <Details
                 key={id}

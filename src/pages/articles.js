@@ -63,18 +63,20 @@ const Article = ({ img, title, date, link }) => {
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
       className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light
-     text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 "
+     text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:bg-dark dark:border-light dark:text-light "
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4">{date}</span>
+      <span className="text-primary font-semibold pl-4 dark:text-primaryDark">
+        {date}
+      </span>
     </motion.li>
   );
 };
 
 const FeaturedArticles = ({ img, title, time, summary, link }) => {
   return (
-    <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+    <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl dark:bg-dark dark:border-dark">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light/70" />
       <Link
         href={link}
         target="_blank"
@@ -89,11 +91,11 @@ const FeaturedArticles = ({ img, title, time, summary, link }) => {
         />
       </Link>
       <Link href={link} target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline dark:text-primaryDark">
           {title}
         </h2>
       </Link>
-      <p className="text-sm mb-2">{summary}</p>
+      <p className="text-sm mb-2 dark:text-light">{summary}</p>
       <span className="text-primary font-semibold">{time}</span>
     </li>
   );
@@ -103,18 +105,18 @@ const articles = () => {
   return (
     <>
       <Head>
-        <title>Tan-Nghia-Profile | About Page</title>
+        <title>Tan-Nghia-Profile | Articles Page</title>
         <meta name="description" content="any description" />
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
         <Layout className="pt-16">
           <AnimatedText
             text="Words Can Change The World! "
-            className="text-8xl mb-16"
+            className="text-8xl mb-16 dark:text-primaryDark"
           />
           <ul className="grid grid-cols-2 gap-16">
             <FeaturedArticles
-              title="    Build A Custom Pagination Component In Reactjs From Scratch"
+              title="   Build A Custom Pagination Component In Reactjs From Scratch"
               summary="  Learn how to build a custom pagination component in ReactJS from scratch. 
                 Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
               time=" 9 min read"
@@ -130,7 +132,7 @@ const articles = () => {
               img={articles2}
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32 dark:text-primaryDark">
             All Articles
           </h2>
           <Article
