@@ -3,11 +3,12 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 
-//* IMPORT PAGE
+//* IMPORT COMPONENT
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
+import TransitionEffect from "@/components/TransitionEffect";
 
 //* IMPORT IMAGE
 import profilePic from "../../public/images/profile/developer-pic-1.png";
@@ -19,6 +20,7 @@ export default function Home() {
         <title>Tan-Nghia-Profile</title>
         <meta name="description" content="Hi I'm Truong Tan Nghia" />
       </Head>
+      <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
