@@ -87,27 +87,31 @@ const NavBar = () => {
           ></span>
         </button>
 
-        <div className="w-full flex justify-center items-center lg:hidden ">
-          <nav>
-            <CustomLink href="/" title="Home" className="mr-4 text-[15px] " />
+        <div className="w-full flex justify-center items-center lg:hidden lg:mr-10 xl:mx-10 xl:flex-row">
+          <nav className="mr-[10rem] lg:mr-10 xl:ml-10   ">
+            <CustomLink
+              href="/"
+              title="Home"
+              className="mr-4 lg:mr-4 text-[15px] "
+            />
             <CustomLink
               href="/about"
               title="About"
-              className="mx-4 text-[15px]"
+              className="mx-4 lg:mx-4 text-[15px]"
             />
             <CustomLink
               href="/project"
               title="Project"
-              className="mx-4 text-[15px]"
+              className="mx-4 lg:mx-4 text-[15px]"
             />
             <CustomLink
               href="/articles"
               title="Articles"
-              className="ml-4 text-[15px]"
+              className="ml-4 lg:ml-4 text-[15px]"
             />
           </nav>
 
-          <nav className="flex items-center justify-center flex-wrap">
+          <nav className="flex items-center justify-center flex-wrap ml-[25rem] lg:ml-15 xl:ml-0 xl:flex-wrap">
             <motion.a
               href="https://www.facebook.com/tannghiaaaa/"
               target={"_blank"}
