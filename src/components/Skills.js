@@ -1,84 +1,148 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
-import { motion } from "framer-motion";
+import styled from "styled-components";
+import { skills } from "../dummy/constants";
 
-const Skill = ({ name, x, y, language }) => {
-  // Define a function to map languages to colors
-  const getSkillColor = (language) => {
-    switch (language.toLowerCase()) {
-      case "html":
-        return "bg-red-500";
-      case "css":
-        return "bg-blue-500";
-      case "javascript":
-        return "bg-yellow-500";
-      case "reactjs":
-        return "bg-blue-700";
-      case "nextjs":
-        return "bg-blue-900";
-      case "vuejs":
-        return "bg-green-500";
-      case "web design":
-        return "bg-purple-500";
-      case "figma":
-        return "bg-pink-500";
-      case "firebase":
-        return "bg-orange-500";
-      case "tailwind css":
-        return "bg-teal-500";
-      // Add more cases for other languages as needed
-      default:
-        return "bg-gray-500"; // Default color for unknown languages
-    }
-  };
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+`;
 
-  return (
-    <motion.div
-      className={`flex items-center justify-center rounded-full font-semibold ${getSkillColor(
-        language
-      )} text-light py-3 px-6 shadow-dark cursor-pointer absolute 
-      lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent `}
-      whileHover={{ scale: 1.2 }}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
-    >
-      {name}
-    </motion.div>
-  );
-};
+const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 12px;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+
+export const Title = styled.div`
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 32px;
+  }
+`;
+
+export const Desc = styled.div`
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+  color: ${({ theme }) => theme.text_secondary};
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const SkillsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 30px;
+  justify-content: center;
+`;
+
+const Skill = styled.div`
+  width: 100%;
+  max-width: 500px;
+  background: ${({ theme }) => theme.card};
+  border: 0.1px solid #854ce6;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 16px;
+  padding: 18px 36px;
+  @media (max-width: 768px) {
+    max-width: 400px;
+    padding: 10px 36px;
+  }
+  @media (max-width: 500px) {
+    max-width: 330px;
+    padding: 10px 36px;
+  }
+`;
+
+const SkillTitle = styled.h2`
+  font-size: 28px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_secondary};
+  margin-bottom: 20px;
+  text-align: center;
+`;
+
+const SkillList = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+`;
+
+const SkillItem = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 80};
+  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  @media (max-width: 500px) {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+`;
+
+const SkillImage = styled.img`
+  width: 24px;
+  height: 24px;
+`;
 
 const Skills = () => {
   return (
-    <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center dark:text-primaryDark md:text-6xl md:mt-32">
-        Skills
-      </h2>
-      <div
-        className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
-      lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]"
-      >
-        <motion.div
-          className="flex items-center justify-center rounded-full font-semibold
-           bg-dark text-light p-8 dark:bg-primaryDark dark:text-gray-950 shadow-dark cursor-pointer
-           lg:p-6 md:p-4 xs:text-xs xs:p-2"
-          whileHover={{ scale: 1.05 }}
-        >
-          Web
-        </motion.div>
-        {/* Use the language prop to specify the programming language for each skill */}
-        <Skill name="HTML" x="-20vw" y="2vw" language="HTML" />
-        <Skill name="CSS" x="-5vw" y="-10vw" language="CSS" />
-        <Skill name="Javascript" x="20vw" y="6vw" language="JavaScript" />
-        <Skill name="ReactJS" x="0vw" y="12vw" language="ReactJS" />
-        <Skill name="NextJS" x="-20vw" y="-15vw" language="NextJS" />
-        <Skill name="VueJS" x="15vw" y="-12vw" language="VueJS" />
-        <Skill name="Web Design" x="32vw" y="-5vw" language="Design" />
-        <Skill name="Figma" x="0vw" y="-20vw" language="Figma" />
-        <Skill name="Firebase" x="-25vw" y="15vw" language="Firebase" />
-        <Skill name="Tailwind CSS" x="18vw" y="18vw" language="Tailwind CSS" />
-      </div>
-    </>
+    <Container id="skills">
+      <Wrapper>
+        <Title>Skills</Title>
+        <Desc>
+          Here are some of my skills on which I have been working on for the
+          past 2 years.
+        </Desc>
+        <SkillsContainer>
+          {skills.map((skill) => (
+            <Skill>
+              <SkillTitle>{skill.title}</SkillTitle>
+              <SkillList>
+                {skill.skills.map((item) => (
+                  <SkillItem>
+                    <SkillImage src={item.image} />
+                    {item.name}
+                  </SkillItem>
+                ))}
+              </SkillList>
+            </Skill>
+          ))}
+        </SkillsContainer>
+      </Wrapper>
+    </Container>
   );
 };
 
