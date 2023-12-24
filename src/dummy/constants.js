@@ -19,7 +19,7 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Frontend",
+    title: "Frontend🌇",
     skills: [
       {
         name: "React Js",
@@ -56,7 +56,7 @@ export const skills = [
     ],
   },
   {
-    title: "Backend",
+    title: "Backend💻",
     skills: [
       {
         name: "Node Js",
@@ -77,7 +77,7 @@ export const skills = [
     ],
   },
   {
-    title: "AI",
+    title: "AI & ML🤖",
     skills: [
       {
         name: "Python",
@@ -94,7 +94,7 @@ export const skills = [
     ],
   },
   {
-    title: "Others",
+    title: "Others🔥",
     skills: [
       {
         name: "Git",
