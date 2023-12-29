@@ -7,17 +7,19 @@ import React, { useEffect, useRef } from "react";
 //* Import Components
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
-import profilePic from "../../public/images/profile/avatar.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
+import { profilePic } from "@/imports";
+import { DataAbount } from "@/dummy/About";
 
 const About = () => {
   const AnimatedNumber = ({ value }) => {
     const ref = useRef(null);
     const motionValue = useMotionValue(0);
+
     const springValue = useSpring(motionValue, { duration: 3000 });
     const isInView = useInView(ref, { once: true });
 
@@ -55,25 +57,11 @@ const About = () => {
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75 ">
                 Hi, I am Tan Nghia
               </h2>
-              <p className=" my-2 font-medium">
-                - Hi I am Truong Tan Nghia, a web developer and UI/UX designer
-                with a passion for creating beautiful, functional, and
-                user-centered digital experiences. With 4 years of experience in
-                the field. I am always looking for new and innovative ways to
-                bring my client visions to life.
-              </p>
-              <p className="my-2 font-medium">
-                - I believe that design is about more than just making things
-                look pretty – it about solving problems and creating intuitive,
-                enjoyable experiences for users.
-              </p>
-              <p className="my-2 font-medium">
-                - Whether I am working on a website, mobile app, or other
-                digital products, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
-              </p>
+              {DataAbount.map((data, id) => (
+                <p key={id} className=" my-2 font-medium">
+                  {data.type}
+                </p>
+              ))}
             </div>
             <div
               className="col-span-3 relative h-max rounded-2xl 

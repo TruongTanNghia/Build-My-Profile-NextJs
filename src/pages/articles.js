@@ -1,18 +1,13 @@
 //* LIB
 import React from "react";
-
-//*IMPORT
-import AnimatedText from "@/components/AnimatedText";
-import Layout from "@/components/Layout";
+import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import articles1 from "../../public/images/articles/pagination component in reactjs.jpg";
-import articles2 from "../../public/images/articles/create loading screen in react js.jpg";
-import { motion, useMotionValue } from "framer-motion";
-import articles3 from "../../public/images/articles/create modal component in react using react portals.png";
-import articles4 from "../../public/images/articles/form validation in reactjs using custom react hook.png";
-import articles5 from "../../public/images/articles/smooth scrolling in reactjs.png";
+//*IMPORT
+import Layout from "@/components/Layout";
+import AnimatedText from "@/components/AnimatedText";
+import { DataArtides, DataArtidesLink } from "@/dummy/Articles";
 
 const FramerImage = motion(Image);
 
@@ -118,44 +113,29 @@ const articles = () => {
             className="text-8xl mb-16 dark:text-primaryDark lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
-            <FeaturedArticles
-              title="   Build A Custom Pagination Component In Reactjs From Scratch"
-              summary="  Learn how to build a custom pagination component in ReactJS from scratch. 
-                Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
-              time=" 9 min read"
-              link="/"
-              img={articles1}
-            />
-            <FeaturedArticles
-              title="    Build A Custom Pagination Component In Reactjs From Scratch"
-              summary="  Learn how to build a custom pagination component in ReactJS from scratch. 
-                Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
-              time=" 9 min read"
-              link="/"
-              img={articles2}
-            />
+            {DataArtides.map((article, id) => (
+              <FeaturedArticles
+                key={id}
+                title={article.title}
+                summary={article.summary}
+                time={article.time}
+                link={article.link}
+                img={article.img}
+              />
+            ))}
           </ul>
           <h2 className="font-bold text-4xl w-full text-center my-16 mt-32 dark:text-primaryDark">
             All Articles
           </h2>
-          <Article
-            title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-            date="March 22, 2023"
-            link="/"
-            img={articles3}
-          />
-          <Article
-            title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-            date="March 22, 2023"
-            link="/"
-            img={articles4}
-          />
-          <Article
-            title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-            date="March 22, 2023"
-            link="/"
-            img={articles5}
-          />
+          {DataArtidesLink.map((article, id) => (
+            <Article
+              key={id}
+              title={article.title}
+              date={article.date}
+              link={article.link}
+              img={article.img}
+            />
+          ))}
         </Layout>
       </main>
     </>
