@@ -9,10 +9,10 @@ import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import TransitionEffect from "@/components/TransitionEffect";
+import { lightBulb, profilePicHome } from "@/imports";
 
 //* IMPORT IMAGE
-import profilePic from "../../public/images/profile/developer-pic-1.png";
-import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+
 export default function Home() {
   return (
     <>
@@ -26,7 +26,7 @@ export default function Home() {
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 md:w-full">
               <Image
-                src={profilePic}
+                src={profilePicHome}
                 alt="TanNghia"
                 className="w-full h-auto lg:hidden md:inline-block md:w-full "
                 priority

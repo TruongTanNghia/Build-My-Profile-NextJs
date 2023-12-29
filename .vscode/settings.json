@@ -10,5 +10,6 @@
   },
   "emmet.triggerExpansionOnTab": true,
   "editor.autoClosingBrackets": "always",
-  "editor.autoClosingQuotes": "always"
+  "editor.autoClosingQuotes": "always",
+  "cSpell.words": ["Artides"]
 }
