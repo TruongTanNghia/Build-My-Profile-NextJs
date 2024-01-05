@@ -120,7 +120,7 @@ export const skills = [
 
       {
         name: "Figma",
-        image: "https://skillicons.dev/icons?i=vscode",
+        image: "https://skillicons.dev/icons?i=figma",
       },
     ],
   },
