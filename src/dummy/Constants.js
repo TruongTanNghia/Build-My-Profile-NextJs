@@ -67,8 +67,8 @@ export const skills = [
         image: "https://skillicons.dev/icons?i=express",
       },
       {
-        name: "MongoDB",
-        image: "https://skillicons.dev/icons?i=mongodb",
+        name: "Postgres SQL",
+        image: "https://skillicons.dev/icons?i=postgres",
       },
       {
         name: "Firebase",
@@ -120,7 +120,7 @@ export const skills = [
 
       {
         name: "Figma",
-        image: "https://skillicons.dev/icons?i=vscode",
+        image: "https://skillicons.dev/icons?i=figma",
       },
     ],
   },

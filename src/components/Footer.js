@@ -15,13 +15,16 @@ const Footer = () => {
           by&nbsp;{" "}
           <Link
             href="/"
-            target={"_blank"}
+            // target={"_blank"}
             className="underline underline-offset-2"
           >
             Truong Tan Nghia
           </Link>
         </div>
-        <Link href="/" target={"_blank"}>
+        <Link
+          href="/"
+          // target={"_blank"}
+        >
           Say Hello
         </Link>
       </Layout>
