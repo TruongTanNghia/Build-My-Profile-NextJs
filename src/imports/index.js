@@ -22,3 +22,10 @@ export { default as profilePic } from "@/assets/images/profile/avatar.png";
 //* IMPORT IMAGE HOME
 export { default as profilePicHome } from "@/assets/images/profile/developer-pic-1.png";
 export { default as lightBulb } from "@/assets/images/svgs/miscellaneous_icons_1.svg";
+
+//* IMPORT IMAGE CERTIFICATE
+export { default as certificate_C } from "@/assets/images/certificate/C.png";
+export { default as articles_Python } from "@/assets/images/certificate/Pythonn.png";
+export { default as certificate_BasicAlgorithms } from "@/assets/images/certificate/BasicAlgorithms.png";
+export { default as certificate_DataStructureAndAlgorithms } from "@/assets/images/certificate/DataStructureAndAlgorithms.png";
+export { default as certificate_JavaScript } from "@/assets/images/certificate/JavaScript.png";
