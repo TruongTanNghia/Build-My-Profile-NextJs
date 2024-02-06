@@ -5,6 +5,9 @@ import {
   certificate_DataStructureAndAlgorithms,
   certificate_JavaScript,
   certificate_BasicAlgorithms,
+  certificate_CPlus,
+  certificate_SQL,
+  certificate_CLOUD,
 } from "@/imports";
 
 export const DataCertificate = [
@@ -52,5 +55,32 @@ export const DataCertificate = [
     time: "Codelearn",
     link: "https://codelearn.io/lms/share/769d9b1d-6fa8-4b01-8fa8-fc8f3447eb9a",
     img: certificate_DataStructureAndAlgorithms,
+  },
+  {
+    id: uuid(),
+    title: "Cloud Essentials",
+    summary:
+      "The Cloud Essentials course provides an overview of cloud computing. This course includes architecture, requirements, basic techniques and instructions on how to create applications and reports for objects. In addition, the course will introduce AWS, applications, security, Web API and services, etc. At the end of the course, you can practice and deepen your knowledge by doing the revision exercises.",
+    time: "Codelearn",
+    link: "https://codelearn.io/lms/share/7a3a7240-9077-420c-9e54-6dbcf4760c44",
+    img: certificate_CLOUD,
+  },
+  {
+    id: uuid(),
+    title: "C++ for Beginners",
+    summary:
+      "Particularly important role of the two programming languages ​​C and C++ is for basic programming learning. Because this is a middle-level programming language. Most information technology training schools in Vietnam use these two languages ​​as their basic subjects.",
+    time: "Codelearn",
+    link: "https://codelearn.io/lms/share/20646434-833d-4c26-830a-bf5554274269",
+    img: certificate_CPlus,
+  },
+  {
+    id: uuid(),
+    title: "PostgreSQL Basics",
+    summary:
+      "SQL is a database computer language designed for the retrieval and management of data in a relational database. SQL stands for Structured Query Language. This tutorial will give you a quick start to SQL. It covers most of the topics required for a basic understanding of SQL and to get a feel of how it works.",
+    time: "Codelearn",
+    link: "https://codelearn.io/lms/share/9f43a55d-e02a-4cee-8f0d-d585a3da2970",
+    img: certificate_SQL,
   },
 ];

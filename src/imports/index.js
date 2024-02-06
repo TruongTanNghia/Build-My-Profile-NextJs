@@ -29,3 +29,6 @@ export { default as articles_Python } from "@/assets/images/certificate/Pythonn.
 export { default as certificate_BasicAlgorithms } from "@/assets/images/certificate/BasicAlgorithms.png";
 export { default as certificate_DataStructureAndAlgorithms } from "@/assets/images/certificate/DataStructureAndAlgorithms.png";
 export { default as certificate_JavaScript } from "@/assets/images/certificate/JavaScript.png";
+export { default as certificate_CPlus } from "@/assets/images/certificate/C++.png";
+export { default as certificate_SQL } from "@/assets/images/certificate/SQL.png";
+export { default as certificate_CLOUD } from "@/assets/images/certificate/CLOUD.png";
